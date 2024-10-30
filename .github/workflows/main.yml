@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run makefile
+      - uses: actions/checkout@v4
       - run: make setup
+      - uses: actions/checkout@v4
       - run: make test
+      - uses: actions/checkout@v4
       - run: make lint

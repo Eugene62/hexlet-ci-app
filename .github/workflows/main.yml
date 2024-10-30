@@ -12,16 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run makefile script
-        run: make setup
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run makefile script
-        run: make test
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run makefile script
-        run: lint
+      - run: make setup
+      - run: make test
+      - run: make lint

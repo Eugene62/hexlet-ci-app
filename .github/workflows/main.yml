@@ -11,10 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+            node-version: '18.x'
+            cache: 'npm' # ускоряет повторные сборки
+      - uses: hexlet-components/hello-from-hexlet-action@release
       - name: Run makefile
         run: make setup
       - name: Run test
         run: make test
       - name: make lint
-        run: lint
+        run: make lint
     
